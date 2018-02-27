@@ -1,7 +1,7 @@
 # SCRIPTS
 
 # UPDATE ALL
-goodMorningClosure() {
+morning () {
 	#echo '# pull all repos';
 	#sh /Users/$USER/pull.sh
 	echo '# update composer';
@@ -11,5 +11,3 @@ goodMorningClosure() {
 
 	echo 'All set, good morning!'
 }
-
-alias morning=goodMorningClosure

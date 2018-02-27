@@ -61,7 +61,7 @@ alias mariastart='brew services start mysql'
 alias mariastop='brew services stop mysql'
 
 # CONFIGS
-alias bashconfig='$EDITOR ~/bash/'
+alias bashconfig='$EDITOR $HOME/.bash/'
 
 # MISC
 alias cl="clear"

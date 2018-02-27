@@ -1,6 +1,3 @@
-# Load configs
-for config in $(~/.bash/*.bash); do
+for config in $HOME/.bash/*.bash; do
 	source $config
 done
-
-
