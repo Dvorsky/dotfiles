@@ -1,4 +1,6 @@
 # Load configs
-for config (~/.bash/*.bash) source $config
+for config in $(~/.bash/*.bash); do
+	source $config
+done
 
 
