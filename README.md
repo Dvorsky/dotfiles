@@ -7,6 +7,8 @@ Collection of my dotfiles.
 It is not advised to just copy someone elses dotfiles, rather look through them and choose which options work for you.
 If you still want to clone my dotfiles read on:
 
+NOTE: I use oh-my-zsh or bash-it so these may not work if you don't these installed.
+
 First clone this repo in your home directory.
 
 Then run setup.sh with first argument being either bash or zsh and second (optional) mac or linux.
