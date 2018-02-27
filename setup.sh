@@ -1,6 +1,6 @@
 # Make symlinks to all dotfiles
 
-DOTFILES='~/dotfiles'
+DOTFILES="$HOME/dotfiles"
 
 case "$1" in
 	bash)
@@ -8,6 +8,7 @@ case "$1" in
 		echo 'Making bash config symlinks'
 
 		ln -s $DOTFILES/bash_profile $HOME/.bash_profile
+		ln -s $DOTFILES/bashrc $HOME/.bashrc
 		ln -s $DOTFILES/bash $HOME/.bash
 
 		echo 'bash symlinks setup \n'
