@@ -1,15 +1,9 @@
 # enviroment
 
-# paths
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:/home/sykdor/miniconda3/bin:"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$WORK/testing-toolkit/vendor/bin:~/.cargo/bin:/usr/local/bin/node:~/Library/Python/3.7/bin:~/.composer/vendor/bin:$PATH
 
-
-# source additional stuff
-#source ~/.nvm/nvm.sh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # preferred editor for local and remote sessions
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=code
+export VISUAL=subl
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

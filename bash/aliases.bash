@@ -3,18 +3,19 @@
 ###############
 
 # ENVIRONMENT VARS
-export DEG_KEY="/Users/$USER/Documents/Setup/keys/$USER"
+export DEG_KEY="/Users/$USER/.ssh/andrijadvorski"
 export EDITOR="/Applications/sublime"
 export PATH="/usr/local/sbin:$PATH"
+export WORK="$HOME/work"
 
 # SSH
 alias deghq='ssh apps@deghq.com -i $DEG_KEY -o IdentitiesOnly=yes'
 alias truba='ssh apps@truba.interaktivni-studio.com -i $DEG_KEY -o IdentitiesOnly=yes'
 
 # BASIC
-alias ll="ls -lahF --color=auto"
-alias ls="ls -hF --color=auto"
-alias lsl="ls -lhF --color=auto"
+# alias ll="ls -lahF --color=auto"
+# alias ls="ls -hF --color=auto"
+# alias lsl="ls -lhF --color=auto"
 alias "cd.."="cd ../"
 alias up="cd ../"
 alias mkdir="mkdir -p"
@@ -49,6 +50,9 @@ alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-pa
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
 alias screenshot="scrot '%Y-%m-%d.jpg' -e 'mv $f ~/shots/'"
 
+# alias to love
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 # LOCALHOST
 alias apconf='sudo open -a $EDITOR /usr/local/etc/httpd/httpd.conf'
 alias hosts='sudo open -a $EDITOR /private/etc/hosts'
@@ -59,9 +63,11 @@ alias apacherestart='sudo httpd -e info -k restart'
 alias memcached-start='memcached -I2m -d start'
 alias mariastart='brew services start mysql'
 alias mariastop='brew services stop mysql'
+alias work="cd $WORK"
+alias xdebugon='export XDEBUG_CONFIG="idekey=PHPSTORM"'
 
 # CONFIGS
-alias bashconfig='$EDITOR $HOME/.bash/'
+alias bashconfig='open -a $EDITOR $HOME/.bash/ .'
 
 # MISC
 alias cl="clear"

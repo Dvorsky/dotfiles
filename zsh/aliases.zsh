@@ -1,18 +1,40 @@
-# aliases
-# basic
-alias ll="ls -lahF --color=auto"
-alias ls="ls -hF --color=auto"
-alias lsl="ls -lhF --color=auto"
+###############
+#   ALIASES   #
+###############
+
+# ENVIRONMENT VARS
+export DEG_KEY="/Users/$USER/.ssh/andrijadvorski"
+export PATH="/usr/local/sbin:$PATH"
+export WORK="$HOME/work"
+
+# SSH
+alias deghq='ssh apps@deghq.com -i $DEG_KEY -o IdentitiesOnly=yes'
+alias truba='ssh apps@truba.interaktivni-studio.com -i $DEG_KEY -o IdentitiesOnly=yes'
+
+
+
+# BASIC
+alias ll="ls-go -alkSinL"
+alias ls="ls-go -an"
+alias lsall="ls-go -rn"
 alias "cd.."="cd ../"
 alias up="cd ../"
 alias mkdir="mkdir -p"
 alias v="vim"
 alias vi="vim"
-alias apt="sudo apt-get"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
+alias subl='open -a "Sublime Text" $1'
 
-# git
+# SYSTEM
+alias updatedb='sudo /usr/libexec/locate.updatedb'
+alias la='ls -al'
+alias bpr='. ~/.bash_profile' #alias reload
+alias fp='ps aux | grep '
+alias hiddenshow='defaults write com.apple.finder AppleShowAllFiles YES;killall Finder'
+alias hiddenhide='defaults write com.apple.finder AppleShowAllFiles NO;killall Finder'
+alias crone='env EDITOR=vi crontab -e'
+alias ports='sudo lsof -i -n -P | grep TCP'
+
+# GIT
 alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
@@ -24,31 +46,32 @@ alias gp="git push"
 alias gu="git unstage"
 alias gco="git checkout"
 
-# tools
+# TOOLS
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
 alias screenshot="scrot '%Y-%m-%d.jpg' -e 'mv $f ~/shots/'"
-alias cpuclear="sudo rmmod intel_powerclamp"
 
-# web development
-alias cdweb="cd /var/www/html"
-alias restartapache="sudo service apache2 restart"
-alias restartmongo="sudo service mongod restart"
-alias adminMongo="cd ~/bin/adminMongo && npm start"
+# alias to love
+alias love="/Applications/love.app/Contents/MacOS/love"
 
-# node
-# alias node="sudo nodejs"
-alias npm="sudo npm"
+# LOCALHOST
+alias apconf='sudo open -a $EDITOR /usr/local/etc/httpd/httpd.conf'
+alias hosts='sudo open -a $EDITOR /private/etc/hosts'
+alias vhosts='sudo open -a $EDITOR //usr/local/etc/httpd/extra/httpd-vhosts.conf'
+alias phpini='sudo open -a $EDITOR /usr/local/etc/php/7.1/php.ini'
+alias erlog='sublime /Users/$USER/work/logs/httpd/error_log'
+alias apacherestart='sudo httpd -e info -k restart'
+alias memcached-start='memcached -I2m -d start'
+alias mariastart='brew services start mysql'
+alias mariastop='brew services stop mysql'
+alias work="cd $WORK"
+alias xdebugon='export XDEBUG_CONFIG="idekey=PHPSTORM"'
 
-# configs
-alias zshconfig="gedit ~/.zshrc"
-alias ohmyzsh="gedit ~/.oh-my-zsh"
-alias phpinicli="sudo gedit /etc/php5/cli/php.ini"
-alias phpiniapache="sudo gedit /etc/php5/apache2/php.ini"
+# CONFIGS
+alias shconfig='open -a $EDITOR $HOME/.zsh/ .'
 
-# misc
-alias dim="xset dpms force off"
+# MISC
 alias cl="clear"
-alias ZZ="quit"
 
-alias python="python3.6"
+# QoL
+alias pip="pip3"

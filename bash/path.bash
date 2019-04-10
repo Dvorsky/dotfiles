@@ -1,0 +1,1 @@
+PATH=$PATH:/$WORK/testing-toolkit/vendor/bin
