@@ -9,6 +9,7 @@ export WORK="$HOME/work"
 
 # SSH
 alias deghq='ssh apps@deghq.com -i $DEG_KEY -o IdentitiesOnly=yes'
+alias do-simuni='ssh root@68.183.78.27 -i ~/ssh/simuni-do'
 alias truba='ssh apps@truba.interaktivni-studio.com -i $DEG_KEY -o IdentitiesOnly=yes'
 
 
@@ -50,6 +51,8 @@ alias gco="git checkout"
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
 alias screenshot="scrot '%Y-%m-%d.jpg' -e 'mv $f ~/shots/'"
+
+alias symf="bin/console"
 
 # alias to love
 alias love="/Applications/love.app/Contents/MacOS/love"
